@@ -28,8 +28,16 @@ def decode_secret_key(secret_key):
         raise
 
 async def check_balance(client, public_key):
-    balance = await client.get_balance(public_key)
-    return balance['result']['value']
+    try:
+        response = await client.get_balance(public_key)
+        logging.info(f"Ответ от Solana API для баланса: {response}")
+        balance_lamports = response['result']['value']
+        balance_sol = balance_lamports / 1_000_000_000  # Преобразование лампортов в SOL
+        logging.info(f"Баланс для {public_key}: {balance_sol} SOL ({balance_lamports} лампортов)")
+        return balance_sol
+    except Exception as e:
+        logging.error(f"Ошибка при проверке баланса: {e}")
+        return 0
 
 # Загружаем конфигурацию
 try:
@@ -45,7 +53,7 @@ transaction_count = config.get('transaction_count', 100)
 min_delay = config.get('min_delay', 30)
 max_delay = config.get('max_delay', 180)
 senders = config.get('senders', [])
-transaction_amount = config.get('transaction_amount', 10000000)
+transaction_amount = config.get('transaction_amount', 0.01)  # Сумма каждой транзакции в SOL
 telegram_bot_token = config.get('telegram_bot_token')
 telegram_chat_id = config.get('telegram_chat_id')
 
@@ -85,7 +93,7 @@ async def send_sol(sender_keypair, recipient_public_key):
                 TransferParams(
                     from_pubkey=sender_keypair.public_key,
                     to_pubkey=recipient_public_key,
-                    lamports=transaction_amount,
+                    lamports=int(transaction_amount * 1_000_000_000),  # Преобразование SOL в лампорты
                 )
             )
         )
@@ -97,32 +105,43 @@ async def send_sol(sender_keypair, recipient_public_key):
         # Отправим транзакцию
         response = await client.send_transaction(transaction, sender_keypair)
         logging.info(f'Транзакция отправлена на {recipient_public_key}: {response["result"]}')
+        return True
 
     except Exception as e:
         logging.error(f'Ошибка отправки транзакции на {recipient_public_key}: {str(e)}')
+        return False
 
-async def process_sender(sender_keypair):
+async def process_sender(sender_keypair, sender_index):
     balance = await check_balance(client, sender_keypair.public_key)
-    logging.info(f'Баланс кошелька {sender_keypair.public_key}: {balance} лампортов')
+    logging.info(f'Баланс кошелька {sender_keypair.public_key}: {balance} SOL')
     if balance < transaction_amount * transaction_count:
-        error_message = f"<b>Недостаточно средств</b> на кошельке {sender_keypair.public_key} для отправки {transaction_count} транзакций. Баланс: {balance} лампортов."
+        error_message = f"<b>Недостаточно средств</b> на кошельке {sender_index} для отправки {transaction_count} транзакций. Баланс: {balance} SOL."
         logging.error(error_message)
         send_telegram_message(telegram_bot_token, telegram_chat_id, error_message)
         return
 
+    success_count = 0
+    fail_count = 0
+
     for _ in range(transaction_count):
         recipient = random.choice(recipient_wallets)
-        await send_sol(sender_keypair, recipient)
+        success = await send_sol(sender_keypair, recipient)
+        if success:
+            success_count += 1
+        else:
+            fail_count += 1
+        
         random_interval = random.randint(min_delay, max_delay)
         logging.info(f"Ожидание {random_interval} секунд перед следующей транзакцией")
         await asyncio.sleep(random_interval)
     
-    success_message = f"<b>Кошелек {sender_keypair.public_key}</b> успешно отправил {transaction_count} транзакций."
-    send_telegram_message(telegram_bot_token, telegram_chat_id, success_message)
+    success_message = f"<b>Кошелек {sender_index}</b> успешно отправил {success_count} транзакций. ✅\n"
+    fail_message = f"<b>Кошелек {sender_index}</b> не смог отправить {fail_count} транзакций. ❌"
+    send_telegram_message(telegram_bot_token, telegram_chat_id, success_message + fail_message)
 
 async def main():
-    for sender_keypair in sender_keypairs:
-        await process_sender(sender_keypair)
+    for index, sender_keypair in enumerate(sender_keypairs, start=1):
+        await process_sender(sender_keypair, index)
 
 # Запуск отправки транзакций
 try:
