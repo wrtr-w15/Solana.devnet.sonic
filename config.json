@@ -1,0 +1,7 @@
+{
+    "rpc_url": "https://api.devnet.solana.com",
+    "transaction_count": 100,
+    "min_delay": 30,
+    "max_delay": 180,
+    "sender_secret_key": "ВАШ СЕКРЕТНЫЙ КЛЮЧ В BASE58"
+}
