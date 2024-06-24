@@ -1,2 +1,0 @@
-2024-06-24 21:41:24,412 [INFO] Конфигурационный файл успешно загружен
-2024-06-24 21:41:24,412 [ERROR] Ошибка при загрузке ключа отправителя: 'ascii' codec can't encode characters in position 0-2: ordinal not in range(128)

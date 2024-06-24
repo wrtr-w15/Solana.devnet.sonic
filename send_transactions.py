@@ -8,6 +8,7 @@ from solana.system_program import TransferParams, transfer
 from solana.keypair import Keypair
 from solana.publickey import PublicKey
 import base58
+from telegram_notify import send_telegram_message
 
 # Настройка логирования
 logging.basicConfig(
@@ -18,6 +19,17 @@ logging.basicConfig(
         logging.StreamHandler()
     ]
 )
+
+def decode_secret_key(secret_key):
+    try:
+        return Keypair.from_secret_key(base58.b58decode(secret_key))
+    except Exception as e:
+        logging.error(f"Ошибка декодирования секретного ключа: {e}")
+        raise
+
+async def check_balance(client, public_key):
+    balance = await client.get_balance(public_key)
+    return balance['result']['value']
 
 # Загружаем конфигурацию
 try:
@@ -32,18 +44,21 @@ rpc_url = config.get('rpc_url')
 transaction_count = config.get('transaction_count', 100)
 min_delay = config.get('min_delay', 30)
 max_delay = config.get('max_delay', 180)
-sender_secret_key = config.get('sender_secret_key')
+senders = config.get('senders', [])
+transaction_amount = config.get('transaction_amount', 10000000)
+telegram_bot_token = config.get('telegram_bot_token')
+telegram_chat_id = config.get('telegram_chat_id')
 
-if not rpc_url or not sender_secret_key:
+if not rpc_url or not senders:
     logging.error("Пожалуйста, проверьте наличие всех необходимых параметров в config.json")
     exit(1)
 
-# Загружаем ключ отправителя
+# Загружаем ключи отправителей
 try:
-    sender_keypair = Keypair.from_secret_key(base58.b58decode(sender_secret_key))
-    logging.info("Ключ отправителя успешно загружен")
+    sender_keypairs = [decode_secret_key(sender) for sender in senders]
+    logging.info("Ключи отправителей успешно загружены")
 except Exception as e:
-    logging.error(f"Ошибка при загрузке ключа отправителя: {e}")
+    logging.error(f"Ошибка при загрузке ключей отправителей: {e}")
     exit(1)
 
 # Загружаем адреса получателей
@@ -58,7 +73,7 @@ except Exception as e:
 # Устанавливаем соединение с RPC
 client = AsyncClient(rpc_url)
 
-async def send_sol(recipient_public_key):
+async def send_sol(sender_keypair, recipient_public_key):
     try:
         # Получаем текущую информацию о блоке для nonce
         response = await client.get_recent_blockhash()
@@ -70,7 +85,7 @@ async def send_sol(recipient_public_key):
                 TransferParams(
                     from_pubkey=sender_keypair.public_key,
                     to_pubkey=recipient_public_key,
-                    lamports=1000,  # Укажите количество лампортов для перевода
+                    lamports=transaction_amount,
                 )
             )
         )
@@ -86,16 +101,28 @@ async def send_sol(recipient_public_key):
     except Exception as e:
         logging.error(f'Ошибка отправки транзакции на {recipient_public_key}: {str(e)}')
 
-async def main():
-    tasks = []
+async def process_sender(sender_keypair):
+    balance = await check_balance(client, sender_keypair.public_key)
+    logging.info(f'Баланс кошелька {sender_keypair.public_key}: {balance} лампортов')
+    if balance < transaction_amount * transaction_count:
+        error_message = f"<b>Недостаточно средств</b> на кошельке {sender_keypair.public_key} для отправки {transaction_count} транзакций. Баланс: {balance} лампортов."
+        logging.error(error_message)
+        send_telegram_message(telegram_bot_token, telegram_chat_id, error_message)
+        return
+
     for _ in range(transaction_count):
         recipient = random.choice(recipient_wallets)
-        tasks.append(send_sol(recipient))
+        await send_sol(sender_keypair, recipient)
         random_interval = random.randint(min_delay, max_delay)
         logging.info(f"Ожидание {random_interval} секунд перед следующей транзакцией")
         await asyncio.sleep(random_interval)
+    
+    success_message = f"<b>Кошелек {sender_keypair.public_key}</b> успешно отправил {transaction_count} транзакций."
+    send_telegram_message(telegram_bot_token, telegram_chat_id, success_message)
 
-    await asyncio.gather(*tasks)
+async def main():
+    for sender_keypair in sender_keypairs:
+        await process_sender(sender_keypair)
 
 # Запуск отправки транзакций
 try:
