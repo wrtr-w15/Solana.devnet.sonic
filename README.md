@@ -11,13 +11,13 @@
 
 2 . Активируйте виртуальное окружение:
 
- На Windows:
+   На Windows:
 
-   .\venv\Scripts\activate
+     .\venv\Scripts\activate
 
- На MacOS/Linux:
+   На MacOS/Linux:
 
-   source venv/bin/activate
+     source venv/bin/activate
 
 3. Установите необходимые пакеты:
 
