@@ -7,7 +7,7 @@
 
 1 . Создайте виртуальное окружение:
 
- python -m venv venv
+    python -m venv venv
 
 2 . Активируйте виртуальное окружение:
 
@@ -25,4 +25,4 @@
 
 4. Запустите скрипт для отправки транзакций:
 
-  python send_transactions.py
+    python send_transactions.py
