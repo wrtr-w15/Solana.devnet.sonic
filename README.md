@@ -10,18 +10,23 @@
    python -m venv venv
 2. **Активируйте виртуальное окружение:**
 
-   На Windows:
-
    ```bash
    .\venv\Scripts\activate
-   bash```
 
-   На MacOS/Linux:
+3. **Установите необходимые пакеты:**
 
    ```bash
-   source venv/bin/activate
+   pip install -r requirements.txt
 
-2. **Установите необходимые пакеты:**
 
-```bash
-pip install -r requirements.txt
+
+## Настройка
+
+*rpc_url: URL RPC сервера Solana.
+transaction_count: Количество транзакций для отправки каждым кошельком.
+min_delay: Минимальная задержка между транзакциями в секундах.
+max_delay: Максимальная задержка между транзакциями в секундах.
+senders: Список секретных ключей отправителей в формате Base58.
+transaction_amount: Сумма каждой транзакции в SOL.
+telegram_bot_token: Токен вашего Telegram-бота.
+telegram_chat_id: ID чата в Telegram, куда будут отправляться уведомления*
