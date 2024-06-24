@@ -10,16 +10,14 @@
    python -m venv venv
 2. **Активируйте виртуальное окружение:**
 
-На Windows:
-bash
-Copy code
-.\venv\Scripts\activate
-На MacOS/Linux:
-bash
-Copy code
-source venv/bin/activate
-Установите необходимые пакеты:
+   На Windows:
+   ```bash
+   .\venv\Scripts\activate
+   На MacOS/Linux:
+   ```bash
+   source venv/bin/activate
 
-bash
-Copy code
+2. **Установите необходимые пакеты:**
+
+```bash
 pip install -r requirements.txt
