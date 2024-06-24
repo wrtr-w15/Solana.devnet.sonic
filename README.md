@@ -21,8 +21,12 @@
 
 3. Установите необходимые пакеты:
 
+
      pip install -r requirements.txt
+
 
 4. Запустите скрипт для отправки транзакций:
 
-    python send_transactions.py
+
+     python send_transactions.py
+
