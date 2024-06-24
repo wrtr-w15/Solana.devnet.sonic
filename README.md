@@ -14,6 +14,7 @@
 
    ```bash
    .\venv\Scripts\activate
+   bash```
 
    На MacOS/Linux:
 
