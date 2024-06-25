@@ -104,44 +104,51 @@ async def send_sol(sender_keypair, recipient_public_key):
 
         # Отправим транзакцию
         response = await client.send_transaction(transaction, sender_keypair)
-        logging.info(f'Транзакция отправлена на {recipient_public_key}: {response["result"]}')
+        logging.info(f'Транзакция отправлена с {sender_keypair.public_key} на {recipient_public_key}: {response["result"]}')
         return True
 
     except Exception as e:
         logging.error(f'Ошибка отправки транзакции на {recipient_public_key}: {str(e)}')
         return False
 
-async def process_sender(sender_keypair, sender_index):
-    balance = await check_balance(client, sender_keypair.public_key)
-    logging.info(f'Баланс кошелька {sender_keypair.public_key}: {balance} SOL')
-    if balance < transaction_amount * transaction_count:
-        error_message = f"<b>Недостаточно средств</b> на кошельке {sender_index} для отправки {transaction_count} транзакций. Баланс: {balance} SOL."
-        logging.error(error_message)
-        send_telegram_message(telegram_bot_token, telegram_chat_id, error_message)
-        return
+async def process_transactions(sender_keypairs, recipient_wallets, transaction_count):
+    send_counts = {str(kp.public_key): 0 for kp in sender_keypairs}
 
-    success_count = 0
-    fail_count = 0
+    while any(count < transaction_count for count in send_counts.values()):
+        sender_keypair = random.choice(sender_keypairs)
+        
+        if send_counts[str(sender_keypair.public_key)] >= transaction_count:
+            continue
 
-    for _ in range(transaction_count):
+        balance = await check_balance(client, sender_keypair.public_key)
+        if balance < transaction_amount:
+            error_message = f"<b>Недостаточно средств</b> на кошельке {sender_keypair.public_key}. Баланс: {balance} SOL."
+            logging.error(error_message)
+            send_telegram_message(telegram_bot_token, telegram_chat_id, error_message)
+            sender_keypairs.remove(sender_keypair)
+            if not sender_keypairs:
+                logging.error("Нет доступных кошельков для отправки транзакций")
+                return
+            continue
+        
         recipient = random.choice(recipient_wallets)
         success = await send_sol(sender_keypair, recipient)
-        if success:
-            success_count += 1
-        else:
-            fail_count += 1
         
+        if success:
+            send_counts[str(sender_keypair.public_key)] += 1
+
         random_interval = random.randint(min_delay, max_delay)
         logging.info(f"Ожидание {random_interval} секунд перед следующей транзакцией")
         await asyncio.sleep(random_interval)
-    
-    success_message = f"<b>Кошелек {sender_index}</b> успешно отправил {success_count} транзакций. ✅\n"
-    fail_message = f"<b>Кошелек {sender_index}</b> не смог отправить {fail_count} транзакций. ❌"
-    send_telegram_message(telegram_bot_token, telegram_chat_id, success_message + fail_message)
+
+    for sender_keypair in sender_keypairs:
+        public_key = str(sender_keypair.public_key)
+        success_message = (f"<b>Кошелек ({public_key})</b> "
+                           f"успешно отправил {send_counts[public_key]} транзакций. ✅")
+        send_telegram_message(telegram_bot_token, telegram_chat_id, success_message)
 
 async def main():
-    for index, sender_keypair in enumerate(sender_keypairs, start=1):
-        await process_sender(sender_keypair, index)
+    await process_transactions(sender_keypairs, recipient_wallets, transaction_count)
 
 # Запуск отправки транзакций
 try:
