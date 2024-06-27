@@ -1,13 +1,15 @@
 {
     "rpc_url": "https://devnet.sonic.game",
-    "transaction_count": 1,
-    "min_delay": 30,
-    "max_delay": 180,
-    "senders": [
-        "СЕКРЕТНЫЙ КЛЮЧ 1 В BASE58",
-        "СЕКРЕТНЫЙ КЛЮЧ 2 В BASE58"
-    ],
-    "transaction_amount": 0.01,
-    "telegram_bot_token": "ВАШ ТЕЛЕГРАМ БОТ ТОКЕН",
-    "telegram_chat_id": "ВАШ ТЕЛЕГРАМ ЧАТ ID"
+    "transaction_count": 100,
+    "min_delay": 10,
+    "max_delay": 15,
+    "min_transaction_amount": 0.001,
+    "max_transaction_amount": 0.01,
+    "senders_file": "senders.xlsx",
+    "telegram_bot_token": "TELEGRAM TOKEN",
+    "telegram_chat_id": "CHAT ID",
+    "faucet_url": "https://faucet.sonic.game/#/",
+    "use_faucet": false,
+    "2captcha_api_key": "2captcha",
+    "proxy_file": "proxies.txt"
 }

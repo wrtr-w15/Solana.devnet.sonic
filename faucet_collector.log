@@ -1,0 +1,340 @@
+2024-06-26 13:10:57,341 [INFO] Конфигурационный файл успешно загружен
+2024-06-26 13:10:57,341 [INFO] Конфигурационный файл успешно загружен
+2024-06-26 13:10:57,510 [INFO] ====== WebDriver manager ======
+2024-06-26 13:10:58,442 [INFO] Get LATEST chromedriver version for google-chrome
+2024-06-26 13:10:58,546 [INFO] Get LATEST chromedriver version for google-chrome
+2024-06-26 13:10:58,588 [INFO] There is no [win64] chromedriver "126.0.6478.126" for browser google-chrome "126.0.6478" in cache
+2024-06-26 13:10:58,589 [INFO] Get LATEST chromedriver version for google-chrome
+2024-06-26 13:10:58,691 [INFO] WebDriver version 126.0.6478.126 selected
+2024-06-26 13:10:58,692 [INFO] Modern chrome version https://storage.googleapis.com/chrome-for-testing-public/126.0.6478.126/win32/chromedriver-win32.zip
+2024-06-26 13:10:58,693 [INFO] About to download new driver from https://storage.googleapis.com/chrome-for-testing-public/126.0.6478.126/win32/chromedriver-win32.zip
+2024-06-26 13:10:58,796 [INFO] Driver downloading response is 200
+2024-06-26 13:10:59,474 [INFO] Get LATEST chromedriver version for google-chrome
+2024-06-26 13:10:59,677 [INFO] Driver has been saved in cache [C:\Users\kkiri\.wdm\drivers\chromedriver\win64\126.0.6478.126]
+2024-06-26 13:11:06,131 [ERROR] Ошибка при сборе монет с крана: Message: no such element: Unable to locate element: {"method":"css selector","selector":"[id="privateKeyInput"]"}
+  (Session info: chrome-headless-shell=126.0.6478.114); For documentation on this error, please visit: https://www.selenium.dev/documentation/webdriver/troubleshooting/errors#no-such-element-exception
+Stacktrace:
+	GetHandleVerifier [0x002CC1C3+27395]
+	(No symbol) [0x00263DC4]
+	(No symbol) [0x00161B7F]
+	(No symbol) [0x001A2C65]
+	(No symbol) [0x001A2D3B]
+	(No symbol) [0x001DEC82]
+	(No symbol) [0x001C39E4]
+	(No symbol) [0x001DCB24]
+	(No symbol) [0x001C3736]
+	(No symbol) [0x00197541]
+	(No symbol) [0x001980BD]
+	GetHandleVerifier [0x00583A93+2876371]
+	GetHandleVerifier [0x005D7F5D+3221661]
+	GetHandleVerifier [0x0034D634+556916]
+	GetHandleVerifier [0x0035474C+585868]
+	(No symbol) [0x0026CE04]
+	(No symbol) [0x00269818]
+	(No symbol) [0x002699B7]
+	(No symbol) [0x0025BF0E]
+	BaseThreadInitThunk [0x76F87BA9+25]
+	RtlInitializeExceptionChain [0x77C3C10B+107]
+	RtlClearBits [0x77C3C08F+191]
+	(No symbol) [0x00000000]
+
+2024-06-26 13:11:12,278 [INFO] ====== WebDriver manager ======
+2024-06-26 13:11:13,202 [INFO] Get LATEST chromedriver version for google-chrome
+2024-06-26 13:11:13,243 [INFO] Get LATEST chromedriver version for google-chrome
+2024-06-26 13:11:13,284 [INFO] Driver [C:\Users\kkiri\.wdm\drivers\chromedriver\win64\126.0.6478.126\chromedriver-win32/chromedriver.exe] found in cache
+2024-06-26 13:11:15,834 [ERROR] Ошибка при загрузке ключей отправителей из Excel файла: Message: invalid argument: cannot parse capability: proxy
+from invalid argument: unrecognized proxy type: MANUAL
+Stacktrace:
+	GetHandleVerifier [0x002CC1C3+27395]
+	(No symbol) [0x00263DC4]
+	(No symbol) [0x00161B7F]
+	(No symbol) [0x00181D2B]
+	(No symbol) [0x00184F34]
+	(No symbol) [0x00180CC0]
+	(No symbol) [0x001CBE47]
+	(No symbol) [0x001CB991]
+	(No symbol) [0x001CCE8C]
+	(No symbol) [0x001CCDAA]
+	(No symbol) [0x001C3736]
+	(No symbol) [0x00197541]
+	(No symbol) [0x001980BD]
+	GetHandleVerifier [0x00583A93+2876371]
+	GetHandleVerifier [0x005D7F5D+3221661]
+	GetHandleVerifier [0x0034D634+556916]
+	GetHandleVerifier [0x0035474C+585868]
+	(No symbol) [0x0026CE04]
+	(No symbol) [0x00269818]
+	(No symbol) [0x002699B7]
+	(No symbol) [0x0025BF0E]
+	BaseThreadInitThunk [0x76F87BA9+25]
+	RtlInitializeExceptionChain [0x77C3C10B+107]
+	RtlClearBits [0x77C3C08F+191]
+	(No symbol) [0x00000000]
+
+2024-06-26 13:11:19,896 [INFO] Ключи отправителей успешно загружены из Excel файла
+2024-06-26 13:11:19,897 [ERROR] Неверный публичный ключ: Адрес_получателя_1 - ('invalid public key input:', 'Адрес_получателя_1')
+2024-06-26 13:11:19,897 [ERROR] Неверный публичный ключ: Адрес_получателя_2 - ('invalid public key input:', 'Адрес_получателя_2')
+2024-06-26 13:11:19,898 [ERROR] Неверный публичный ключ: Адрес_получателя_3 - ('invalid public key input:', 'Адрес_получателя_3')
+2024-06-26 13:11:19,898 [ERROR] Неверный публичный ключ: ... - ('invalid public key input:', '...')
+2024-06-26 13:11:19,898 [ERROR] Неверный публичный ключ: Адрес_получателя_N - ('invalid public key input:', 'Адрес_получателя_N')
+2024-06-26 13:11:19,898 [ERROR] Ошибка при загрузке адресов получателей: Список кошельков получателей пуст или содержит только неверные ключи.
+2024-06-26 13:14:51,212 [INFO] Конфигурационный файл успешно загружен
+2024-06-26 13:14:51,212 [INFO] Конфигурационный файл успешно загружен
+2024-06-26 13:14:51,213 [ERROR] Ошибка при загрузке ключей отправителей из Excel файла: name 'pd' is not defined
+2024-06-26 13:14:51,383 [INFO] Ключи отправителей успешно загружены из Excel файла
+2024-06-26 13:14:51,383 [INFO] Успешно загружено 17 валидных адресов получателей
+2024-06-26 13:14:52,253 [INFO] HTTP Request: POST https://devnet.sonic.game "HTTP/1.1 200 OK"
+2024-06-26 13:14:52,254 [INFO] Ответ от Solana API для баланса: {'jsonrpc': '2.0', 'result': {'context': {'apiVersion': '1.18.12', 'slot': 10552877}, 'value': 1149667099}, 'id': 1}
+2024-06-26 13:14:52,254 [INFO] Баланс для DCCtCS6RYXnJkosvggnJ9KQFV2RUSRF4svFE3jn9WTmo: 1.149667099 SOL (1149667099 лампортов)
+2024-06-26 13:14:52,439 [INFO] HTTP Request: POST https://devnet.sonic.game "HTTP/1.1 200 OK"
+2024-06-26 13:14:52,638 [INFO] HTTP Request: POST https://devnet.sonic.game "HTTP/1.1 200 OK"
+2024-06-26 13:14:52,853 [INFO] HTTP Request: POST https://devnet.sonic.game "HTTP/1.1 200 OK"
+2024-06-26 13:14:52,854 [INFO] Транзакция отправлена с DCCtCS6RYXnJkosvggnJ9KQFV2RUSRF4svFE3jn9WTmo на 41C43gvoqVC476UbfWxE1yz97sZ7aZX8rFB3FSr9Y3NE: GQeTzR1NHbsmSUyKVZsH3xkWGjwmJ3cJoziD9czDCH96pSTMPmcXEHZd7qUrWziquqwNZTVXNU2nA2qG7bJj4b2
+2024-06-26 13:14:52,855 [INFO] Ожидание 15 секунд перед следующей транзакцией
+2024-06-26 13:15:19,815 [INFO] Конфигурационный файл успешно загружен
+2024-06-26 13:15:19,816 [INFO] Конфигурационный файл успешно загружен
+2024-06-26 13:15:19,988 [ERROR] Ошибка при загрузке ключей отправителей из Excel файла: 'PublicKey'
+2024-06-26 13:15:20,001 [INFO] Ключи отправителей успешно загружены из Excel файла
+2024-06-26 13:15:20,002 [INFO] Успешно загружено 17 валидных адресов получателей
+2024-06-26 13:15:20,710 [INFO] HTTP Request: POST https://devnet.sonic.game "HTTP/1.1 200 OK"
+2024-06-26 13:15:20,711 [INFO] Ответ от Solana API для баланса: {'jsonrpc': '2.0', 'result': {'context': {'apiVersion': '1.18.12', 'slot': 10552947}, 'value': 1151900752}, 'id': 1}
+2024-06-26 13:15:20,711 [INFO] Баланс для DCCtCS6RYXnJkosvggnJ9KQFV2RUSRF4svFE3jn9WTmo: 1.151900752 SOL (1151900752 лампортов)
+2024-06-26 13:15:20,915 [INFO] HTTP Request: POST https://devnet.sonic.game "HTTP/1.1 200 OK"
+2024-06-26 13:15:21,121 [INFO] HTTP Request: POST https://devnet.sonic.game "HTTP/1.1 200 OK"
+2024-06-26 13:15:21,323 [INFO] HTTP Request: POST https://devnet.sonic.game "HTTP/1.1 200 OK"
+2024-06-26 13:15:21,324 [INFO] Транзакция отправлена с DCCtCS6RYXnJkosvggnJ9KQFV2RUSRF4svFE3jn9WTmo на 8qdXqjFtJwhM1yUxN7eG4QhG2ja9SCZUHDqdahsuqYav: 4niEag84CNPHS3RhrtwAeLxvnmeQUPffqKPnGFPQGhTuA2xXD2NFQTRcUntZYdpwx9Hqw9hhRQZUJEwphYAGtp61
+2024-06-26 13:15:21,325 [INFO] Ожидание 11 секунд перед следующей транзакцией
+2024-06-26 13:15:32,782 [INFO] HTTP Request: POST https://devnet.sonic.game "HTTP/1.1 200 OK"
+2024-06-26 13:15:32,783 [INFO] Ответ от Solana API для баланса: {'jsonrpc': '2.0', 'result': {'context': {'apiVersion': '1.18.12', 'slot': 10552976}, 'value': 1411032953}, 'id': 5}
+2024-06-26 13:15:32,783 [INFO] Баланс для 7piN8M5gAEqsrnNJNBnfSYH2jagFHdWTHSvYjaEB4cPc: 1.411032953 SOL (1411032953 лампортов)
+2024-06-26 13:15:33,004 [INFO] HTTP Request: POST https://devnet.sonic.game "HTTP/1.1 200 OK"
+2024-06-26 13:15:33,244 [INFO] HTTP Request: POST https://devnet.sonic.game "HTTP/1.1 200 OK"
+2024-06-26 13:15:33,453 [INFO] HTTP Request: POST https://devnet.sonic.game "HTTP/1.1 200 OK"
+2024-06-26 13:15:33,453 [INFO] Транзакция отправлена с 7piN8M5gAEqsrnNJNBnfSYH2jagFHdWTHSvYjaEB4cPc на 7piN8M5gAEqsrnNJNBnfSYH2jagFHdWTHSvYjaEB4cPc: qDqH9zREps7thd5qtSv49HFGRjvRmjNkrTTdm2SCxF31K4zgnP3nTArAmq6oj25YN5R5TXnaYZ9wZUc89PoWixg
+2024-06-26 13:15:33,454 [INFO] Ожидание 11 секунд перед следующей транзакцией
+2024-06-26 13:15:44,706 [INFO] HTTP Request: POST https://devnet.sonic.game "HTTP/1.1 200 OK"
+2024-06-26 13:15:44,707 [INFO] Ответ от Solana API для баланса: {'jsonrpc': '2.0', 'result': {'context': {'apiVersion': '1.18.12', 'slot': 10553006}, 'value': 2700164941}, 'id': 9}
+2024-06-26 13:15:44,707 [INFO] Баланс для 5q1QNJNSQpxGtwp11shT7Hmg1sFt1V36UfTvNrXsA9FJ: 2.700164941 SOL (2700164941 лампортов)
+2024-06-26 13:15:44,907 [INFO] HTTP Request: POST https://devnet.sonic.game "HTTP/1.1 200 OK"
+2024-06-26 13:15:45,106 [INFO] HTTP Request: POST https://devnet.sonic.game "HTTP/1.1 200 OK"
+2024-06-26 13:15:45,314 [INFO] HTTP Request: POST https://devnet.sonic.game "HTTP/1.1 200 OK"
+2024-06-26 13:15:45,315 [INFO] Транзакция отправлена с 5q1QNJNSQpxGtwp11shT7Hmg1sFt1V36UfTvNrXsA9FJ на 7piN8M5gAEqsrnNJNBnfSYH2jagFHdWTHSvYjaEB4cPc: 2g8ANrLxrwFFduiSVf2XXGxGh6w65bdx1m7fGJHPR2UJPybf9AKntHGjfr1dc3pbBbKnENxKyC6Cr59JWDzzvD7C
+2024-06-26 13:15:45,315 [INFO] Ожидание 15 секунд перед следующей транзакцией
+2024-06-26 13:15:57,367 [INFO] Конфигурационный файл успешно загружен
+2024-06-26 13:15:57,530 [ERROR] Ошибка при загрузке ключей отправителей из Excel файла: 'PublicKey'
+2024-06-26 13:16:08,860 [INFO] Конфигурационный файл успешно загружен
+2024-06-26 13:16:09,018 [ERROR] Ошибка при загрузке ключей отправителей из Excel файла: 'PublicKey'
+2024-06-26 13:19:35,830 [INFO] Конфигурационный файл успешно загружен
+2024-06-26 13:19:35,996 [INFO] ====== WebDriver manager ======
+2024-06-26 13:20:02,991 [INFO] Конфигурационный файл успешно загружен
+2024-06-26 13:20:03,150 [INFO] ====== WebDriver manager ======
+2024-06-26 13:20:04,119 [INFO] Get LATEST chromedriver version for google-chrome
+2024-06-26 13:20:04,167 [INFO] Get LATEST chromedriver version for google-chrome
+2024-06-26 13:20:04,208 [INFO] Driver [C:\Users\kkiri\.wdm\drivers\chromedriver\win64\126.0.6478.126\chromedriver-win32/chromedriver.exe] found in cache
+2024-06-26 13:20:20,749 [ERROR] Ошибка при сборе монет с крана: Message: 
+Stacktrace:
+	GetHandleVerifier [0x002CC1C3+27395]
+	(No symbol) [0x00263DC4]
+	(No symbol) [0x00161B7F]
+	(No symbol) [0x001A2C65]
+	(No symbol) [0x001A2D3B]
+	(No symbol) [0x001DEC82]
+	(No symbol) [0x001C39E4]
+	(No symbol) [0x001DCB24]
+	(No symbol) [0x001C3736]
+	(No symbol) [0x00197541]
+	(No symbol) [0x001980BD]
+	GetHandleVerifier [0x00583A93+2876371]
+	GetHandleVerifier [0x005D7F5D+3221661]
+	GetHandleVerifier [0x0034D634+556916]
+	GetHandleVerifier [0x0035474C+585868]
+	(No symbol) [0x0026CE04]
+	(No symbol) [0x00269818]
+	(No symbol) [0x002699B7]
+	(No symbol) [0x0025BF0E]
+	BaseThreadInitThunk [0x76F87BA9+25]
+	RtlInitializeExceptionChain [0x77C3C10B+107]
+	RtlClearBits [0x77C3C08F+191]
+	(No symbol) [0x00000000]
+
+2024-06-26 13:20:26,889 [INFO] ====== WebDriver manager ======
+2024-06-26 13:20:27,820 [INFO] Get LATEST chromedriver version for google-chrome
+2024-06-26 13:20:27,860 [INFO] Get LATEST chromedriver version for google-chrome
+2024-06-26 13:20:27,900 [INFO] Driver [C:\Users\kkiri\.wdm\drivers\chromedriver\win64\126.0.6478.126\chromedriver-win32/chromedriver.exe] found in cache
+2024-06-26 13:20:30,443 [ERROR] Ошибка при загрузке ключей отправителей из Excel файла: Message: invalid argument: cannot parse capability: proxy
+from invalid argument: unrecognized proxy type: MANUAL
+Stacktrace:
+	GetHandleVerifier [0x002CC1C3+27395]
+	(No symbol) [0x00263DC4]
+	(No symbol) [0x00161B7F]
+	(No symbol) [0x00181D2B]
+	(No symbol) [0x00184F34]
+	(No symbol) [0x00180CC0]
+	(No symbol) [0x001CBE47]
+	(No symbol) [0x001CB991]
+	(No symbol) [0x001CCE8C]
+	(No symbol) [0x001CCDAA]
+	(No symbol) [0x001C3736]
+	(No symbol) [0x00197541]
+	(No symbol) [0x001980BD]
+	GetHandleVerifier [0x00583A93+2876371]
+	GetHandleVerifier [0x005D7F5D+3221661]
+	GetHandleVerifier [0x0034D634+556916]
+	GetHandleVerifier [0x0035474C+585868]
+	(No symbol) [0x0026CE04]
+	(No symbol) [0x00269818]
+	(No symbol) [0x002699B7]
+	(No symbol) [0x0025BF0E]
+	BaseThreadInitThunk [0x76F87BA9+25]
+	RtlInitializeExceptionChain [0x77C3C10B+107]
+	RtlClearBits [0x77C3C08F+191]
+	(No symbol) [0x00000000]
+
+2024-06-26 13:27:27,328 [INFO] Конфигурационный файл успешно загружен
+2024-06-26 13:27:27,757 [ERROR] Ошибка при проверке прокси txugrkqs:5szgxqb6mboy@http://64.137.89.160:6233: Please check proxy URL. It is malformed and could be missing the host.
+2024-06-26 13:28:16,223 [INFO] Конфигурационный файл успешно загружен
+2024-06-26 13:28:16,659 [ERROR] Ошибка при проверке прокси txugrkqs:5szgxqb6mboy@64.137.89.160:6233: Please check proxy URL. It is malformed and could be missing the host.
+2024-06-26 13:32:29,681 [INFO] Конфигурационный файл успешно загружен
+2024-06-26 13:32:30,716 [INFO] Прокси txugrkqs:5szgxqb6mboy@64.137.89.160:6233 работает
+2024-06-26 13:32:40,516 [INFO] Конфигурационный файл успешно загружен
+2024-06-26 13:32:40,941 [ERROR] Ошибка при проверке 2Captcha API ключа: 'TwoCaptcha' object has no attribute 'balance'
+2024-06-26 13:32:53,150 [INFO] Конфигурационный файл успешно загружен
+2024-06-26 13:32:53,735 [INFO] Приватный ключ валиден: 7piN8M5gAEqsrnNJNBnfSYH2jagFHdWTHSvYjaEB4cPc
+2024-06-26 13:32:53,735 [INFO] Приватный ключ валиден: DCCtCS6RYXnJkosvggnJ9KQFV2RUSRF4svFE3jn9WTmo
+2024-06-26 13:32:53,735 [INFO] Приватный ключ валиден: ACqeDBCjbGxTJbeLFr4xzWKwN9fAJipGmA7WbqHd2iRs
+2024-06-26 13:32:53,736 [INFO] Приватный ключ валиден: 5q1QNJNSQpxGtwp11shT7Hmg1sFt1V36UfTvNrXsA9FJ
+2024-06-26 13:33:01,344 [INFO] Конфигурационный файл успешно загружен
+2024-06-26 13:33:01,771 [INFO] Валидный адрес получателя: 6VKPXFVuerPd37jaTZCk9NBfZYyZW8K7YR3WZzkF3PzZ
+2024-06-26 13:33:01,771 [INFO] Валидный адрес получателя: EdEkABLkqPW5Pfi4gxB5XiSn9vnQYw8qfWtfhAqZqjki
+2024-06-26 13:33:01,771 [INFO] Валидный адрес получателя: Cze8hYeiE9ynYgLS4hh71CbJLRV5uH18Y8A9GbZKMbWX
+2024-06-26 13:33:01,771 [INFO] Валидный адрес получателя: 3bhimiQWJK2tsgfNM3UWHqwCNvauasL1izfBfzdRmbs5
+2024-06-26 13:33:01,772 [INFO] Валидный адрес получателя: GkgSPqxtvAJJAm1hWQNk5gsUVKc4WYp98rFEFkNwfH9g
+2024-06-26 13:33:01,772 [INFO] Валидный адрес получателя: GvJQjsUttcgPQjNU7bRuxzRLxp7SeaETh4Yim7KXGULf
+2024-06-26 13:33:01,772 [INFO] Валидный адрес получателя: 41C43gvoqVC476UbfWxE1yz97sZ7aZX8rFB3FSr9Y3NE
+2024-06-26 13:33:01,772 [INFO] Валидный адрес получателя: DL2qb7f9bD5RtCpUWGccQ1XTV7ub7TzRzqa8n3tF84Ho
+2024-06-26 13:33:01,773 [INFO] Валидный адрес получателя: ESNAbAV2PjbWusSGSkEs4jxuKi81uzsDcsjgCvNWW4pG
+2024-06-26 13:33:01,773 [INFO] Валидный адрес получателя: BmCwDURsG1yELPxJJ5mscK8s9SjnM3CCGZBDD3K1DGqa
+2024-06-26 13:33:01,773 [INFO] Валидный адрес получателя: 3tRXeMcNFnRSxDFUzbraX8tc8LhuQKbG2FN9PvNSTaTH
+2024-06-26 13:33:01,773 [INFO] Валидный адрес получателя: CrDUmoXjdN2cgbibRfWxWcX4eJYfFJefDCdB1kxkpfAe
+2024-06-26 13:33:01,774 [INFO] Валидный адрес получателя: 8qdXqjFtJwhM1yUxN7eG4QhG2ja9SCZUHDqdahsuqYav
+2024-06-26 13:33:01,774 [INFO] Валидный адрес получателя: 7piN8M5gAEqsrnNJNBnfSYH2jagFHdWTHSvYjaEB4cPc
+2024-06-26 13:33:01,774 [INFO] Валидный адрес получателя: DCCtCS6RYXnJkosvggnJ9KQFV2RUSRF4svFE3jn9WTmo
+2024-06-26 13:33:01,774 [INFO] Валидный адрес получателя: ACqeDBCjbGxTJbeLFr4xzWKwN9fAJipGmA7WbqHd2iRs
+2024-06-26 13:33:01,774 [INFO] Валидный адрес получателя: 5q1QNJNSQpxGtwp11shT7Hmg1sFt1V36UfTvNrXsA9FJ
+2024-06-26 13:37:59,638 [INFO] Конфигурационный файл успешно загружен
+2024-06-26 13:38:00,790 [INFO] Прокси txugrkqs:5szgxqb6mboy@64.137.89.160:6233 работает
+2024-06-26 13:38:06,483 [INFO] Конфигурационный файл успешно загружен
+2024-06-26 13:38:06,913 [ERROR] Ошибка при проверке 2Captcha API ключа: 'TwoCaptcha' object has no attribute 'balance'
+2024-06-26 13:45:50,997 [INFO] Конфигурационный файл успешно загружен
+2024-06-26 13:45:51,425 [INFO] Завершение программы
+2024-06-26 15:28:07,586 [INFO] Конфигурационный файл успешно загружен
+2024-06-26 15:28:08,025 [ERROR] Ошибка при проверке 2Captcha API ключа: 'TwoCaptcha' object has no attribute 'balance'
+2024-06-26 15:29:55,585 [INFO] Конфигурационный файл успешно загружен
+2024-06-26 15:29:56,026 [ERROR] Ошибка при проверке 2Captcha API ключа: 'TwoCaptcha' object has no attribute 'recaptcha'
+2024-06-26 15:30:09,674 [INFO] Конфигурационный файл успешно загружен
+2024-06-26 15:30:10,658 [INFO] Прокси txugrkqs:5szgxqb6mboy@64.137.89.160:6233 работает
+2024-06-26 15:30:43,812 [INFO] Конфигурационный файл успешно загружен
+2024-06-26 15:30:44,255 [ERROR] Ошибка при проверке 2Captcha API ключа: 'TwoCaptcha' object has no attribute 'solve_recaptcha'
+2024-06-26 15:32:18,492 [INFO] Конфигурационный файл успешно загружен
+2024-06-26 15:32:18,936 [ERROR] Ошибка при проверке 2Captcha API ключа: 'TwoCaptcha' object has no attribute 'recaptcha'
+2024-06-26 15:34:34,385 [INFO] Конфигурационный файл успешно загружен
+2024-06-26 15:34:34,807 [ERROR] Ошибка при проверке 2Captcha API ключа: 'TwoCaptcha' object has no attribute 'balance'
+2024-06-26 15:38:15,769 [INFO] Конфигурационный файл успешно загружен
+2024-06-26 15:38:16,198 [ERROR] Ошибка при проверке 2Captcha API ключа: 'TwoCaptcha' object has no attribute 'balance'
+2024-06-26 15:38:25,122 [INFO] Конфигурационный файл успешно загружен
+2024-06-26 15:38:25,550 [INFO] Конфигурационный файл успешно загружен
+2024-06-26 15:38:25,716 [INFO] ====== WebDriver manager ======
+2024-06-26 15:38:26,644 [INFO] Get LATEST chromedriver version for google-chrome
+2024-06-26 15:38:26,741 [INFO] Get LATEST chromedriver version for google-chrome
+2024-06-26 15:38:26,786 [INFO] Driver [C:\Users\kkiri\.wdm\drivers\chromedriver\win64\126.0.6478.126\chromedriver-win32/chromedriver.exe] found in cache
+2024-06-26 15:38:43,257 [ERROR] Ошибка при сборе монет с крана: Message: 
+Stacktrace:
+	GetHandleVerifier [0x002CC1C3+27395]
+	(No symbol) [0x00263DC4]
+	(No symbol) [0x00161B7F]
+	(No symbol) [0x001A2C65]
+	(No symbol) [0x001A2D3B]
+	(No symbol) [0x001DEC82]
+	(No symbol) [0x001C39E4]
+	(No symbol) [0x001DCB24]
+	(No symbol) [0x001C3736]
+	(No symbol) [0x00197541]
+	(No symbol) [0x001980BD]
+	GetHandleVerifier [0x00583A93+2876371]
+	GetHandleVerifier [0x005D7F5D+3221661]
+	GetHandleVerifier [0x0034D634+556916]
+	GetHandleVerifier [0x0035474C+585868]
+	(No symbol) [0x0026CE04]
+	(No symbol) [0x00269818]
+	(No symbol) [0x002699B7]
+	(No symbol) [0x0025BF0E]
+	BaseThreadInitThunk [0x76F87BA9+25]
+	RtlInitializeExceptionChain [0x77C3C10B+107]
+	RtlClearBits [0x77C3C08F+191]
+	(No symbol) [0x00000000]
+
+2024-06-26 15:38:49,364 [INFO] ====== WebDriver manager ======
+2024-06-26 15:38:50,287 [INFO] Get LATEST chromedriver version for google-chrome
+2024-06-26 15:38:50,328 [INFO] Get LATEST chromedriver version for google-chrome
+2024-06-26 15:38:50,399 [INFO] Driver [C:\Users\kkiri\.wdm\drivers\chromedriver\win64\126.0.6478.126\chromedriver-win32/chromedriver.exe] found in cache
+2024-06-26 15:38:52,926 [ERROR] Ошибка при загрузке ключей отправителей из Excel файла: Message: invalid argument: cannot parse capability: proxy
+from invalid argument: unrecognized proxy type: MANUAL
+Stacktrace:
+	GetHandleVerifier [0x002CC1C3+27395]
+	(No symbol) [0x00263DC4]
+	(No symbol) [0x00161B7F]
+	(No symbol) [0x00181D2B]
+	(No symbol) [0x00184F34]
+	(No symbol) [0x00180CC0]
+	(No symbol) [0x001CBE47]
+	(No symbol) [0x001CB991]
+	(No symbol) [0x001CCE8C]
+	(No symbol) [0x001CCDAA]
+	(No symbol) [0x001C3736]
+	(No symbol) [0x00197541]
+	(No symbol) [0x001980BD]
+	GetHandleVerifier [0x00583A93+2876371]
+	GetHandleVerifier [0x005D7F5D+3221661]
+	GetHandleVerifier [0x0034D634+556916]
+	GetHandleVerifier [0x0035474C+585868]
+	(No symbol) [0x0026CE04]
+	(No symbol) [0x00269818]
+	(No symbol) [0x002699B7]
+	(No symbol) [0x0025BF0E]
+	BaseThreadInitThunk [0x76F87BA9+25]
+	RtlInitializeExceptionChain [0x77C3C10B+107]
+	RtlClearBits [0x77C3C08F+191]
+	(No symbol) [0x00000000]
+
+2024-06-27 12:29:35,468 [INFO] Конфигурационный файл успешно загружен
+2024-06-27 12:29:36,080 [INFO] Ключи отправителей успешно загружены из Excel файла
+2024-06-27 12:29:36,081 [INFO] Успешно загружено 17 валидных адресов получателей
+2024-06-27 12:29:36,586 [INFO] HTTP Request: POST https://devnet.sonic.game "HTTP/1.1 200 OK"
+2024-06-27 12:29:36,587 [INFO] Ответ от Solana API для баланса: {'jsonrpc': '2.0', 'result': {'context': {'apiVersion': '1.18.12', 'slot': 10758863}, 'value': 2717948509}, 'id': 1}
+2024-06-27 12:29:36,587 [INFO] Баланс для 5q1QNJNSQpxGtwp11shT7Hmg1sFt1V36UfTvNrXsA9FJ: 2.717948509 SOL (2717948509 лампортов)
+2024-06-27 12:29:36,824 [INFO] HTTP Request: POST https://devnet.sonic.game "HTTP/1.1 200 OK"
+2024-06-27 12:29:37,049 [INFO] HTTP Request: POST https://devnet.sonic.game "HTTP/1.1 200 OK"
+2024-06-27 12:29:37,271 [INFO] HTTP Request: POST https://devnet.sonic.game "HTTP/1.1 200 OK"
+2024-06-27 12:29:37,272 [INFO] Транзакция отправлена с 5q1QNJNSQpxGtwp11shT7Hmg1sFt1V36UfTvNrXsA9FJ на DL2qb7f9bD5RtCpUWGccQ1XTV7ub7TzRzqa8n3tF84Ho: 5BWs2q75LY7PAq7S2VZYgYCZmH2iiuQbxfTY6rxiGEkDjp9HsU2p1AXH5SnxxxUyApGTJbkkynnDhJo61pM3dRK
+2024-06-27 12:29:37,272 [INFO] Ожидание 10 секунд перед следующей транзакцией
+2024-06-27 12:32:51,014 [INFO] Конфигурационный файл успешно загружен
+2024-06-27 12:32:51,637 [INFO] Ключи отправителей успешно загружены из Excel файла
+2024-06-27 12:32:51,637 [INFO] Успешно загружено 17 валидных адресов получателей
+2024-06-27 12:32:52,063 [INFO] HTTP Request: POST https://devnet.sonic.game "HTTP/1.1 200 OK"
+2024-06-27 12:32:52,064 [INFO] Ответ от Solana API для баланса: {'jsonrpc': '2.0', 'result': {'context': {'apiVersion': '1.18.12', 'slot': 10759344}, 'value': 2708691268}, 'id': 1}
+2024-06-27 12:32:52,064 [INFO] Баланс для 5q1QNJNSQpxGtwp11shT7Hmg1sFt1V36UfTvNrXsA9FJ: 2.708691268 SOL (2708691268 лампортов)
+2024-06-27 12:32:52,290 [INFO] HTTP Request: POST https://devnet.sonic.game "HTTP/1.1 200 OK"
+2024-06-27 12:32:52,497 [INFO] HTTP Request: POST https://devnet.sonic.game "HTTP/1.1 200 OK"
+2024-06-27 12:32:52,699 [INFO] HTTP Request: POST https://devnet.sonic.game "HTTP/1.1 200 OK"
+2024-06-27 12:32:52,700 [INFO] Транзакция отправлена с 5q1QNJNSQpxGtwp11shT7Hmg1sFt1V36UfTvNrXsA9FJ на Cze8hYeiE9ynYgLS4hh71CbJLRV5uH18Y8A9GbZKMbWX: 2h8GtzHt36uhwPTpiBG17Pn8AKyRXQPYDefuNvFhF9C8fMDLqyZFpccHNbhHATP8wq8ivk8rgKV9G3xdMmAXpmgm
+2024-06-27 12:32:53,023 [INFO] Кошелек 5q1QNJNSQpxGtwp11shT7Hmg1sFt1V36UfTvNrXsA9FJ отправил 1 транзакций.
+2024-06-27 12:32:53,024 [INFO] Ожидание 15 секунд перед следующей транзакцией
+2024-06-27 12:33:08,485 [INFO] HTTP Request: POST https://devnet.sonic.game "HTTP/1.1 200 OK"
+2024-06-27 12:33:08,486 [INFO] Ответ от Solana API для баланса: {'jsonrpc': '2.0', 'result': {'context': {'apiVersion': '1.18.12', 'slot': 10759385}, 'value': 1121005352}, 'id': 5}
+2024-06-27 12:33:08,486 [INFO] Баланс для DCCtCS6RYXnJkosvggnJ9KQFV2RUSRF4svFE3jn9WTmo: 1.121005352 SOL (1121005352 лампортов)
+2024-06-27 12:33:08,696 [INFO] HTTP Request: POST https://devnet.sonic.game "HTTP/1.1 200 OK"
+2024-06-27 12:33:08,927 [INFO] HTTP Request: POST https://devnet.sonic.game "HTTP/1.1 200 OK"
+2024-06-27 12:33:09,139 [INFO] HTTP Request: POST https://devnet.sonic.game "HTTP/1.1 200 OK"
+2024-06-27 12:33:09,140 [INFO] Транзакция отправлена с DCCtCS6RYXnJkosvggnJ9KQFV2RUSRF4svFE3jn9WTmo на 3bhimiQWJK2tsgfNM3UWHqwCNvauasL1izfBfzdRmbs5: 4ysp749cLwAEBdG4os3SDRy1Wn6msiJiN4KzZvBGn4G4WzbipoHQZ2B8H2ZBjM8hxMHFNZia2kZZ6fymkfYmhiyv
+2024-06-27 12:33:09,288 [INFO] Кошелек DCCtCS6RYXnJkosvggnJ9KQFV2RUSRF4svFE3jn9WTmo отправил 1 транзакций.
+2024-06-27 12:33:09,288 [INFO] Ожидание 10 секунд перед следующей транзакцией
